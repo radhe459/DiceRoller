@@ -1,8 +1,13 @@
 function rollDice(){
-    let inputValue = document.getElementById("diceInput").value;
-    inputValue = Number(inputValue)
     let diceResult = document.getElementById("result")
     let diceImages = document.getElementById("images")
+
+    let inputValue = document.getElementById("diceInput").value;
+    inputValue = Number(inputValue)
+    if(!Number.isInteger(inputValue)){
+        diceResult.textContent = "Enter Only Natural Number"
+        return
+    }
 
     const values = []
     const images = []
